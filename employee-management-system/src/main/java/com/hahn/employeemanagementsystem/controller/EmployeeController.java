@@ -1,6 +1,5 @@
 package com.hahn.employeemanagementsystem.controller;
 
-import com.hahn.employeemanagementsystem.dto.EmployeeDto;
 import com.hahn.employeemanagementsystem.entity.Employee;
 import com.hahn.employeemanagementsystem.service.EmployeeService;
 import jakarta.validation.Valid;
@@ -23,7 +22,7 @@ public class EmployeeController {
     }
 
     @PostMapping
-    public Employee createEmployee(@RequestBody @Valid EmployeeDto employee) {
+    public Employee createEmployee(@RequestBody @Valid Employee employee) {
         // return employeeService.createEmployee(employee);
         return null;
     }
