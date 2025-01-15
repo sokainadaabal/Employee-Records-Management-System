@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  oracledb:
+    image: gvenzl/oracle-xe:21-slim
+    environment:
+      ORACLE_PASSWORD: admin123 # Mot de passe pour l'utilisateur "SYSTEM"
+      ORACLE_CHARACTERSET: AL32UTF8 # Jeu de caractères
+    ports:
+      - "1521:1521" # Port par défaut d'Oracle Database
+    volumes:
+      - oracle-data:/opt/oracle/oradata # Persistance des données
+volumes:
+  oracle-data:
